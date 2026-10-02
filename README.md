@@ -1,5 +1,7 @@
 # Error signals for language-model information extraction
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23112378.svg)](https://doi.org/10.5281/zenodo.23112378)
+
 Code, prompts, raw model outputs and analysis for the paper *Detecting erroneous records in information extraction by
 small language models* (O. Kholodniak).
 
