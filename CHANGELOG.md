@@ -34,3 +34,14 @@ outputs were not changed afterwards. Changes to the analysis code:
   `results/reanalysis.json`, `figures/token_sets.png` and `figures/errors_caught.png`.
 - `stats.out_of_fold` fits the rank transform and the standardisation of a combined score on the training folds;
   `stats.cross_fitted`, which computes `C` in the October analysis, standardises on all records.
+
+## 2026-11-25: replication on new data
+
+- `REPLICATION_PROTOCOL.md`: the replication on SNIPS and fresh MASSIVE requests with Qwen2.5-7B and Granite 4.1 3B,
+  and a format arm that adds Qwen2.5-3B and Gemma 3 4B.
+- `snips.py` loads SNIPS at a pinned commit with SHA-256 checks; `replication.py` writes the manifest
+  (`data/replication_manifest.json`), builds the prompt arms and runs the calls into one ledger per phase, one row
+  per attempt; `replication_analysis.py` computes the analyses of the protocol and the threshold file.
+  `scripts/replication_smoke.py` checks the pipeline on training utterances.
+- `results/replication/gate.jsonl` and `gate.meta.jsonl`: the log-probability gate of Granite 4.1 3B.
+- `THIRD_PARTY_NOTICES.md` covers the SNIPS requests.
