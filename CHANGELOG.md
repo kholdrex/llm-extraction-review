@@ -23,3 +23,14 @@ outputs were not changed afterwards. Changes to the analysis code:
   from the output file; figure files have descriptive names. Published numbers are unchanged.
 - `metrics.py` lost an unused helper after the freeze. The repository has no history from before the freeze, so
   `protocol_freeze.sha256` documents the hashes at that time but the frozen files themselves are not included.
+
+## 2026-11-24: exploratory reanalysis of the stored outputs
+
+- `ADDENDUM.md` lists the analyses added on 2026-11-24, after the October analysis, their definitions and the
+  contrasts with intervals. No output was regenerated; `PROTOCOL.md`, `results/raw_test.jsonl` and
+  `results/summary.json` are unchanged.
+- New modules: `tokens.py` (token sets and aggregations), `controls.py` (output format, finer disagreement, scores
+  from the retrieved examples), `reanalysis.py` and the command `xreview reanalyze`, which writes
+  `results/reanalysis.json`, `figures/token_sets.png` and `figures/errors_caught.png`.
+- `stats.out_of_fold` fits the rank transform and the standardisation of a combined score on the training folds;
+  `stats.cross_fitted`, which computes `C` in the October analysis, standardises on all records.

@@ -33,11 +33,12 @@ go to review.
 src/xreview/   data, validation, prompts, Ollama client, extraction runner, error scores, error kinds, statistics,
                analysis
 scripts/       Fig. 1 (pipeline diagram)
-results/       raw_test.jsonl (all model outputs with token log-probabilities), summary.json;
+results/       raw_test.jsonl (all model outputs with token log-probabilities), summary.json, reanalysis.json;
                pilot_*_dev.jsonl: 40 development requests, Qwen2.5-3B, with fixed and with retrieved examples
 figures/       figures of the paper
 tests/         unit tests
 PROTOCOL.md    analysis plan written before the test run; protocol_freeze.sha256 holds the hashes at that time
+ADDENDUM.md    exploratory analyses added after the test results were known (2026-11-24)
 CHANGELOG.md   changes after the freeze
 ```
 
@@ -50,6 +51,7 @@ Python 3.10+ and [uv](https://docs.astral.sh/uv/). Install from the checkout (ed
 uv venv && uv pip install -e ".[dev]"
 uv run pytest
 uv run xreview analyze             # results/summary.json and figures/ from the stored outputs
+uv run xreview reanalyze           # results/reanalysis.json and two more figures (ADDENDUM.md)
 uv run python scripts/draw_scheme.py
 ```
 

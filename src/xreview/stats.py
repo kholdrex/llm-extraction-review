@@ -53,3 +53,25 @@ def cross_fitted(x: np.ndarray, y: np.ndarray, folds: int, seed: int) -> np.ndar
         w = fit_logistic(z[fold != k], y[fold != k].astype(float))
         out[fold == k] = np.column_stack([np.ones((fold == k).sum()), z[fold == k]]) @ w
     return out
+
+
+def ecdf(reference: np.ndarray, x: np.ndarray) -> np.ndarray:
+    """Mid-rank empirical distribution function of each column of `reference`, evaluated at the rows of `x`."""
+    out = np.empty(x.shape)
+    for j in range(x.shape[1]):
+        s = np.sort(reference[:, j])
+        out[:, j] = (np.searchsorted(s, x[:, j], "left") + np.searchsorted(s, x[:, j], "right")) / (2 * len(s))
+    return out
+
+
+def out_of_fold(x: np.ndarray, y: np.ndarray, folds: int, seed: int) -> np.ndarray:
+    """Out-of-fold log-odds; the rank transform and the standardisation are fitted on the training folds only."""
+    fold = np.random.default_rng(seed).permutation(len(y)) % folds
+    out = np.empty(len(y))
+    for k in range(folds):
+        train, test = fold != k, fold == k
+        r_train, r_test = ecdf(x[train], x[train]), ecdf(x[train], x[test])
+        mean, std = r_train.mean(axis=0), r_train.std(axis=0) + 1e-12
+        w = fit_logistic((r_train - mean) / std, y[train].astype(float))
+        out[test] = np.column_stack([np.ones(test.sum()), (r_test - mean) / std]) @ w
+    return out

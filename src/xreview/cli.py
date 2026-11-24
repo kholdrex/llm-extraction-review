@@ -54,6 +54,13 @@ def cmd_analyze(args):
     analysis.main(onto, split["test"], args.raw, args.figures)
 
 
+def cmd_reanalyze(args):
+    from . import reanalysis
+
+    onto, _, retriever, split = setup()
+    reanalysis.main(onto, split["test"], retriever, args.raw, args.figures)
+
+
 def main():
     parser = argparse.ArgumentParser(prog="xreview")
     sub = parser.add_subparsers(required=True)
@@ -69,6 +76,10 @@ def main():
                          help="model outputs to analyse; summary.json is written next to this file")
     analyze.add_argument("--figures", type=Path, default=ROOT / "figures")
     analyze.set_defaults(func=cmd_analyze)
+    reanalyze = sub.add_parser("reanalyze", help="exploratory analyses of ADDENDUM.md; writes reanalysis.json")
+    reanalyze.add_argument("--raw", type=Path, default=RESULTS / "raw_test.jsonl")
+    reanalyze.add_argument("--figures", type=Path, default=ROOT / "figures")
+    reanalyze.set_defaults(func=cmd_reanalyze)
     args = parser.parse_args()
     args.func(args)
 
