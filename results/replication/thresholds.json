@@ -1,0 +1,15 @@
+{
+ "manifest_sha256": "5195cec4c044ec915af49707bb26868472f2163b2ac8d15c03bec7aee513322a",
+ "items": 100,
+ "thresholds": {
+  "snips / qwen2.5:7b-instruct": 0.8680361043950166,
+  "snips / ibm/granite4.1:3b": 0.8597049732004081,
+  "massive / qwen2.5:7b-instruct": 0.9687900785532069,
+  "massive / ibm/granite4.1:3b": 0.8971600078540152
+ },
+ "dev_inputs": {
+  "results/replication/dev.jsonl": "06a667ffaa4a6f59e6e27dd8f131637cae233abb51790d8fbeca8e2d896e8a3f",
+  "results/replication/dev.jsonl.meta.jsonl": "0d3ca992b58228fa7b8ed301bb8ed0bfb725b7898e7e404aca5d2344c47b7fcc"
+ },
+ "issues": {}
+}
