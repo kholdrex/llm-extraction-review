@@ -1,0 +1,723 @@
+{
+ "cells": {
+  "snips / qwen2.5:7b-instruct": {
+   "status": "complete",
+   "issues": {},
+   "primary": {
+    "n": 700,
+    "errors": 257,
+    "estimable": true,
+    "auroc_L_field": 0.8416526864059165,
+    "auroc_D": 0.664096055370616,
+    "difference": {
+     "value": 0.1775566310353005,
+     "ci": [
+      0.14801448803899192,
+      0.20682888053835954
+     ],
+     "undefined_draws": 0
+    },
+    "replicated": true
+   },
+   "secondary": {
+    "review_yield": {
+     "0.1": {
+      "caught_per_1000": {
+       "value": 0.0,
+       "ci": [
+        -12.857142857142858,
+        10.0
+       ]
+      },
+      "accepted_error": {
+       "value": 0.0,
+       "ci": [
+        -0.011111111111111127,
+        0.014285714285714235
+       ]
+      }
+     },
+     "0.2": {
+      "caught_per_1000": {
+       "value": -1.4285714285714286,
+       "ci": [
+        -11.428571428571429,
+        12.857142857142858
+       ]
+      },
+      "accepted_error": {
+       "value": 0.0017857142857142794,
+       "ci": [
+        -0.01607142857142857,
+        0.01428571428571429
+       ]
+      }
+     },
+     "0.3": {
+      "caught_per_1000": {
+       "value": 30.0,
+       "ci": [
+        12.857142857142858,
+        47.142857142857146
+       ]
+      },
+      "accepted_error": {
+       "value": -0.04285714285714287,
+       "ci": [
+        -0.06734693877551018,
+        -0.01836734693877551
+       ]
+      }
+     }
+    },
+    "field_sum_minus_field": {
+     "value": 0.007386847722022694,
+     "ci": [
+      0.0036156541421387078,
+      0.01112172826232382
+     ],
+     "undefined_draws": 0
+    },
+    "json_open_worst_minus_field": {
+     "value": -0.0038032164847037198,
+     "ci": [
+      -0.01291179102600605,
+      0.005368809920946396
+     ],
+     "undefined_draws": 0
+    },
+    "unanimous": {
+     "requests": 559,
+     "wrong": 152
+    },
+    "rules": {
+     "flagged": 49,
+     "wrong_among_flagged": 49
+    },
+    "malformed": {
+     "count": 0,
+     "of": 700
+    },
+    "strict_parse": {
+     "count": 700,
+     "of": 700
+    }
+   },
+   "sensitivity": {
+    "without_malformed": {
+     "n": 700,
+     "errors": 257,
+     "estimable": true,
+     "auroc_L_field": 0.8416526864059165,
+     "auroc_D": 0.664096055370616,
+     "difference": {
+      "value": 0.1775566310353005,
+      "ci": [
+       0.14801448803899192,
+       0.20682888053835954
+      ],
+      "undefined_draws": 0
+     },
+     "replicated": true
+    },
+    "without_train_matches": {
+     "n": 674,
+     "errors": 256,
+     "estimable": true,
+     "auroc_L_field": 0.8340497906698564,
+     "auroc_D": 0.6624925239234449,
+     "difference": {
+      "value": 0.17155726674641147,
+      "ci": [
+       0.14182982384358134,
+       0.20190538664478586
+      ],
+      "undefined_draws": 0
+     },
+     "replicated": true
+    }
+   },
+   "threshold_transport": {
+    "t": 0.8680361043950166,
+    "review_share": 0.3,
+    "accepted_error": 0.22244897959183674,
+    "accepted_error_at_30_percent": 0.22244897959183674
+   }
+  },
+  "snips / ibm/granite4.1:3b": {
+   "status": "complete",
+   "issues": {},
+   "primary": {
+    "n": 700,
+    "errors": 258,
+    "estimable": true,
+    "auroc_L_field": 0.7993265284646953,
+    "auroc_D": 0.6261926058437687,
+    "difference": {
+     "value": 0.17313392262092664,
+     "ci": [
+      0.14106938121125728,
+      0.2040593288794243
+     ],
+     "undefined_draws": 0
+    },
+    "replicated": true
+   },
+   "secondary": {
+    "review_yield": {
+     "0.1": {
+      "caught_per_1000": {
+       "value": -7.142857142857143,
+       "ci": [
+        -18.571428571428573,
+        4.285714285714286
+       ]
+      },
+      "accepted_error": {
+       "value": 0.007936507936507908,
+       "ci": [
+        -0.004761904761904745,
+        0.020634920634920673
+       ]
+      }
+     },
+     "0.2": {
+      "caught_per_1000": {
+       "value": 10.0,
+       "ci": [
+        -5.714285714285714,
+        31.428571428571427
+       ]
+      },
+      "accepted_error": {
+       "value": -0.012500000000000011,
+       "ci": [
+        -0.03928571428571431,
+        0.0071428571428571175
+       ]
+      }
+     },
+     "0.3": {
+      "caught_per_1000": {
+       "value": 47.142857142857146,
+       "ci": [
+        28.571428571428573,
+        65.71428571428571
+       ]
+      },
+      "accepted_error": {
+       "value": -0.06734693877551018,
+       "ci": [
+        -0.09387755102040815,
+        -0.040816326530612235
+       ]
+      }
+     }
+    },
+    "field_sum_minus_field": {
+     "value": 0.0064102564102564985,
+     "ci": [
+      0.0036313078521134578,
+      0.009267319020029127
+     ],
+     "undefined_draws": 0
+    },
+    "json_open_worst_minus_field": {
+     "value": -0.0007760707145111345,
+     "ci": [
+      -0.00806094231080754,
+      0.006805649123525297
+     ],
+     "undefined_draws": 0
+    },
+    "unanimous": {
+     "requests": 589,
+     "wrong": 176
+    },
+    "rules": {
+     "flagged": 49,
+     "wrong_among_flagged": 49
+    },
+    "malformed": {
+     "count": 1,
+     "of": 700
+    },
+    "strict_parse": {
+     "count": 699,
+     "of": 700
+    }
+   },
+   "sensitivity": {
+    "without_malformed": {
+     "n": 699,
+     "errors": 257,
+     "estimable": true,
+     "auroc_L_field": 0.7999102065249926,
+     "auroc_D": 0.6247513072873567,
+     "difference": {
+      "value": 0.17515889923763583,
+      "ci": [
+       0.14456465889911377,
+       0.20767492127341916
+      ],
+      "undefined_draws": 0
+     },
+     "replicated": true
+    },
+    "without_train_matches": {
+     "n": 674,
+     "errors": 258,
+     "estimable": true,
+     "auroc_L_field": 0.7914383944543828,
+     "auroc_D": 0.6251304412641622,
+     "difference": {
+      "value": 0.16630795319022063,
+      "ci": [
+       0.1349010841226927,
+       0.1990100464722364
+      ],
+      "undefined_draws": 0
+     },
+     "replicated": true
+    }
+   },
+   "threshold_transport": {
+    "t": 0.8597049732004081,
+    "review_share": 0.25,
+    "accepted_error": 0.26476190476190475,
+    "accepted_error_at_30_percent": 0.24081632653061225
+   }
+  },
+  "massive / qwen2.5:7b-instruct": {
+   "status": "complete",
+   "issues": {},
+   "primary": {
+    "n": 500,
+    "errors": 191,
+    "estimable": true,
+    "auroc_L_field": 0.8173977871532896,
+    "auroc_D": 0.6352615259492705,
+    "difference": {
+     "value": 0.18213626120401905,
+     "ci": [
+      0.1395492938764217,
+      0.22332632380709475
+     ],
+     "undefined_draws": 0
+    },
+    "replicated": true
+   },
+   "secondary": {
+    "review_yield": {
+     "0.1": {
+      "caught_per_1000": {
+       "value": 4.0,
+       "ci": [
+        -10.0,
+        14.0
+       ]
+      },
+      "accepted_error": {
+       "value": -0.004444444444444473,
+       "ci": [
+        -0.015555555555555545,
+        0.011111111111111127
+       ]
+      }
+     },
+     "0.2": {
+      "caught_per_1000": {
+       "value": 28.0,
+       "ci": [
+        2.0,
+        48.0
+       ]
+      },
+      "accepted_error": {
+       "value": -0.034999999999999976,
+       "ci": [
+        -0.06,
+        -0.0024999999999999467
+       ]
+      }
+     },
+     "0.3": {
+      "caught_per_1000": {
+       "value": 62.0,
+       "ci": [
+        43.95,
+        90.0
+       ]
+      },
+      "accepted_error": {
+       "value": -0.08857142857142855,
+       "ci": [
+        -0.1285714285714286,
+        -0.06278571428571465
+       ]
+      }
+     }
+    },
+    "field_sum_minus_field": {
+     "value": 0.0042698114166624945,
+     "ci": [
+      0.0008220607442090521,
+      0.0077130097554142015
+     ],
+     "undefined_draws": 0
+    },
+    "json_open_worst_minus_field": {
+     "value": 0.013732865687321016,
+     "ci": [
+      -0.014913022932785952,
+      0.043978349606066995
+     ],
+     "undefined_draws": 0
+    },
+    "unanimous": {
+     "requests": 430,
+     "wrong": 133
+    },
+    "rules": {
+     "flagged": 29,
+     "wrong_among_flagged": 28
+    },
+    "malformed": {
+     "count": 0,
+     "of": 500
+    },
+    "strict_parse": {
+     "count": 500,
+     "of": 500
+    }
+   },
+   "sensitivity": {
+    "without_malformed": {
+     "n": 500,
+     "errors": 191,
+     "estimable": true,
+     "auroc_L_field": 0.8173977871532896,
+     "auroc_D": 0.6352615259492705,
+     "difference": {
+      "value": 0.18213626120401905,
+      "ci": [
+       0.1395492938764217,
+       0.22332632380709475
+      ],
+      "undefined_draws": 0
+     },
+     "replicated": true
+    }
+   },
+   "threshold_transport": {
+    "t": 0.9687900785532069,
+    "review_share": 0.31,
+    "accepted_error": 0.22028985507246376,
+    "accepted_error_at_30_percent": 0.22857142857142856
+   }
+  },
+  "massive / ibm/granite4.1:3b": {
+   "status": "complete",
+   "issues": {},
+   "primary": {
+    "n": 500,
+    "errors": 217,
+    "estimable": true,
+    "auroc_L_field": 0.8274739053264073,
+    "auroc_D": 0.6299929979971015,
+    "difference": {
+     "value": 0.1974809073293058,
+     "ci": [
+      0.15791706277071454,
+      0.23815327369210026
+     ],
+     "undefined_draws": 0
+    },
+    "replicated": true
+   },
+   "secondary": {
+    "review_yield": {
+     "0.1": {
+      "caught_per_1000": {
+       "value": -8.0,
+       "ci": [
+        -18.0,
+        6.0
+       ]
+      },
+      "accepted_error": {
+       "value": 0.00888888888888889,
+       "ci": [
+        -0.006666666666666654,
+        0.020000000000000018
+       ]
+      }
+     },
+     "0.2": {
+      "caught_per_1000": {
+       "value": 26.0,
+       "ci": [
+        2.0,
+        48.0
+       ]
+      },
+      "accepted_error": {
+       "value": -0.03249999999999997,
+       "ci": [
+        -0.06,
+        -0.0025000000000000022
+       ]
+      }
+     },
+     "0.3": {
+      "caught_per_1000": {
+       "value": 60.0,
+       "ci": [
+        36.0,
+        82.04999999999973
+       ]
+      },
+      "accepted_error": {
+       "value": -0.08571428571428569,
+       "ci": [
+        -0.11721428571428573,
+        -0.051428571428571435
+       ]
+      }
+     }
+    },
+    "field_sum_minus_field": {
+     "value": 0.002442559150640733,
+     "ci": [
+      0.0007018937860854724,
+      0.004242566084541169
+     ],
+     "undefined_draws": 0
+    },
+    "json_open_worst_minus_field": {
+     "value": -0.013824884792626668,
+     "ci": [
+      -0.0413115379980263,
+      0.014496209191007643
+     ],
+     "undefined_draws": 0
+    },
+    "unanimous": {
+     "requests": 425,
+     "wrong": 153
+    },
+    "rules": {
+     "flagged": 32,
+     "wrong_among_flagged": 31
+    },
+    "malformed": {
+     "count": 0,
+     "of": 500
+    },
+    "strict_parse": {
+     "count": 498,
+     "of": 500
+    }
+   },
+   "sensitivity": {
+    "without_malformed": {
+     "n": 500,
+     "errors": 217,
+     "estimable": true,
+     "auroc_L_field": 0.8274739053264073,
+     "auroc_D": 0.6299929979971015,
+     "difference": {
+      "value": 0.1974809073293058,
+      "ci": [
+       0.15791706277071454,
+       0.23815327369210026
+      ],
+      "undefined_draws": 0
+     },
+     "replicated": true
+    }
+   },
+   "threshold_transport": {
+    "t": 0.8971600078540152,
+    "review_share": 0.222,
+    "accepted_error": 0.31362467866323906,
+    "accepted_error_at_30_percent": 0.28285714285714286
+   }
+  }
+ },
+ "format_arm": {
+  "qwen2.5:7b-instruct": {
+   "status": "complete",
+   "issues": {},
+   "arms": {
+    "labelled": {
+     "n": 200,
+     "wrong": 83,
+     "wrapped": 0,
+     "not_well_formed": 0,
+     "strict_parse": 200,
+     "G": 0.0
+    },
+    "bare": {
+     "n": 200,
+     "wrong": 84,
+     "wrapped": 0,
+     "not_well_formed": 0,
+     "strict_parse": 200,
+     "G": 0.0001026272577997478
+    }
+   },
+   "W_labelled": 0.0,
+   "W_bare": 0.0,
+   "W_bare_minus_labelled": 0.0,
+   "wrapped_only_labelled": 0,
+   "wrapped_only_bare": 0,
+   "G_bare_minus_labelled": {
+    "value": 0.0001026272577997478,
+    "ci": [
+     0.0,
+     0.0006224712107064684
+    ],
+    "undefined_draws": 0
+   },
+   "informative": false,
+   "not_informative_because": [
+    "no wrapped reply in the labelled arm"
+   ],
+   "result": "not informative"
+  },
+  "ibm/granite4.1:3b": {
+   "status": "complete",
+   "issues": {},
+   "arms": {
+    "labelled": {
+     "n": 200,
+     "wrong": 87,
+     "wrapped": 1,
+     "not_well_formed": 0,
+     "strict_parse": 199,
+     "G": -0.010985657613671096
+    },
+    "bare": {
+     "n": 200,
+     "wrong": 91,
+     "wrapped": 0,
+     "not_well_formed": 0,
+     "strict_parse": 200,
+     "G": 0.0002520415364452022
+    }
+   },
+   "W_labelled": 0.005,
+   "W_bare": 0.0,
+   "W_bare_minus_labelled": -0.005,
+   "wrapped_only_labelled": 1,
+   "wrapped_only_bare": 0,
+   "G_bare_minus_labelled": {
+    "value": 0.011237699150116298,
+    "ci": [
+     -0.0026464043576596625,
+     0.03220536930327234
+    ],
+    "undefined_draws": 0
+   },
+   "informative": true,
+   "not_informative_because": [],
+   "result": "not supported"
+  },
+  "qwen2.5:3b-instruct": {
+   "status": "complete",
+   "issues": {},
+   "arms": {
+    "labelled": {
+     "n": 200,
+     "wrong": 99,
+     "wrapped": 97,
+     "not_well_formed": 1,
+     "strict_parse": 102,
+     "G": 0.17421742174217425
+    },
+    "bare": {
+     "n": 200,
+     "wrong": 99,
+     "wrapped": 1,
+     "not_well_formed": 0,
+     "strict_parse": 199,
+     "G": 0.007300730073007244
+    }
+   },
+   "W_labelled": 0.485,
+   "W_bare": 0.005,
+   "W_bare_minus_labelled": -0.48,
+   "wrapped_only_labelled": 96,
+   "wrapped_only_bare": 0,
+   "G_bare_minus_labelled": {
+    "value": -0.166916691669167,
+    "ci": [
+     -0.24832796756238126,
+     -0.08953183704521903
+    ],
+    "undefined_draws": 0
+   },
+   "informative": true,
+   "not_informative_because": [],
+   "result": "supported"
+  },
+  "gemma3:4b": {
+   "status": "complete",
+   "issues": {},
+   "arms": {
+    "labelled": {
+     "n": 200,
+     "wrong": 85,
+     "wrapped": 200,
+     "not_well_formed": 0,
+     "strict_parse": 0,
+     "G": 0.18480818414322242
+    },
+    "bare": {
+     "n": 200,
+     "wrong": 91,
+     "wrapped": 0,
+     "not_well_formed": 0,
+     "strict_parse": 200,
+     "G": 0.039116846456295984
+    }
+   },
+   "W_labelled": 1.0,
+   "W_bare": 0.0,
+   "W_bare_minus_labelled": -1.0,
+   "wrapped_only_labelled": 200,
+   "wrapped_only_bare": 0,
+   "G_bare_minus_labelled": {
+    "value": -0.14569133768692644,
+    "ci": [
+     -0.22677014521909264,
+     -0.06463588404043653
+    ],
+    "undefined_draws": 0
+   },
+   "informative": true,
+   "not_informative_because": [],
+   "result": "supported"
+  }
+ },
+ "overall": {
+  "verdict": "replicated",
+  "replicated_cells": 4
+ },
+ "development": {},
+ "format_shared": {
+  "models": {
+   "qwen2.5:3b-instruct": "supported",
+   "gemma3:4b": "supported"
+  },
+  "shared": true
+ },
+ "thresholds": {
+  "snips / qwen2.5:7b-instruct": 0.8680361043950166,
+  "snips / ibm/granite4.1:3b": 0.8597049732004081,
+  "massive / qwen2.5:7b-instruct": 0.9687900785532069,
+  "massive / ibm/granite4.1:3b": 0.8971600078540152
+ },
+ "not_admitted": {}
+}
